@@ -7,11 +7,12 @@ public class MiniDuckSimulator {
         mallard.performQuack();
         mallard.performFly();
 
-        /* TODO: Fix me!
+        // TODO: Fix me!
         Duck model = new ModelDuck();
         model.performFly();
         model.setFlyBehavior(new FlyRocketPowered());
         model.performFly();
-        */
+        model.performQuack();
+        model.swim();
     }
 }

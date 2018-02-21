@@ -155,3 +155,9 @@ and `java.util.Observer`
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
 
+Sorting (We want to sort these numbers, but we don't know if we are gonna use BrickSort, BubbleSort or some other sorting)
+
+===============================================================
+
+Perbedaan dari implementasi observer pattern dengan membuat subject dan observer sendiri dengan menggunakan modul dari java yaitu
+kita tidak perlu membuat interface dari subject lagi karena sudah diatasi oleh modul dari java itu.

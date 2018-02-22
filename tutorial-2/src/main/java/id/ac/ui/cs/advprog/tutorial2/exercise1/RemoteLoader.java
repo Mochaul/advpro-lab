@@ -1,11 +1,6 @@
 package id.ac.ui.cs.advprog.tutorial2.exercise1;
 
-import id.ac.ui.cs.advprog.tutorial2.exercise1.command.CeilingFanCommand;
-import id.ac.ui.cs.advprog.tutorial2.exercise1.command.CeilingFanHighCommand;
-import id.ac.ui.cs.advprog.tutorial2.exercise1.command.CeilingFanMediumCommand;
-import id.ac.ui.cs.advprog.tutorial2.exercise1.command.CeilingFanOffCommand;
-import id.ac.ui.cs.advprog.tutorial2.exercise1.command.LightOffCommand;
-import id.ac.ui.cs.advprog.tutorial2.exercise1.command.LightOnCommand;
+import id.ac.ui.cs.advprog.tutorial2.exercise1.command.*;
 import id.ac.ui.cs.advprog.tutorial2.exercise1.invoker.RemoteControlWithUndo;
 import id.ac.ui.cs.advprog.tutorial2.exercise1.receiver.CeilingFan;
 import id.ac.ui.cs.advprog.tutorial2.exercise1.receiver.Light;
@@ -18,6 +13,8 @@ public class RemoteLoader {
         CeilingFan ceilingFan = new CeilingFan("Living Room");
         Light light = new Light("Kitchen");
 
+        CeilingFanCommand ceilingFanLow =
+                new CeilingFanLowCommand(ceilingFan);
         CeilingFanCommand ceilingFanMedium =
                 new CeilingFanMediumCommand(ceilingFan);
         CeilingFanCommand ceilingFanHigh =
@@ -44,5 +41,6 @@ public class RemoteLoader {
         remoteControl.onButtonWasPushed(2);
         System.out.println(remoteControl);
         remoteControl.undoButtonWasPushed();
+        System.out.println(remoteControl    );
     }
 }

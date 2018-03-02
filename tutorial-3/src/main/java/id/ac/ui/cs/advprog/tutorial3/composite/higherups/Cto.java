@@ -2,18 +2,16 @@ package id.ac.ui.cs.advprog.tutorial3.composite.higherups;
 
 import id.ac.ui.cs.advprog.tutorial3.composite.Employees;
 
-public class Ceo extends Employees {
-    public Ceo(String name, double salary) {
-        //TODO Implement
+public class Cto extends Employees {
+    public Cto(String name, double salary) {
         this.name = name;
-        if(salary<200000) throw new IllegalArgumentException();
+        if(salary<100000) throw new IllegalArgumentException();
         this.salary = salary;
-        role = "CEO";
+        role = "CTO";
     }
 
     @Override
     public double getSalary() {
-        //TODO Implement
         return salary;
     }
 }

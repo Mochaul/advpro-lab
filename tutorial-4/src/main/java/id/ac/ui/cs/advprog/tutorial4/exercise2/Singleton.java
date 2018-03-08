@@ -1,12 +1,11 @@
 package id.ac.ui.cs.advprog.tutorial4.exercise2;
 
 public class Singleton {
+    private static Singleton singleton = new Singleton();
 
-    // TODO Implement me!
-    // What's missing in this Singleton declaration?
+    private Singleton(){}
 
     public static Singleton getInstance() {
-        // TODO Implement me!
-        return null;
+        return singleton;
     }
 }

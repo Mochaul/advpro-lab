@@ -29,12 +29,12 @@ public abstract class Pizza {
         System.out.println("Place pizza in official PizzaStore box");
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override

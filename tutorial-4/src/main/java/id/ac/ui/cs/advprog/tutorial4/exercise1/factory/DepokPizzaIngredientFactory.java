@@ -17,24 +17,24 @@ import id.ac.ui.cs.advprog.tutorial4.exercise1.factory.veggies.Veggies;
 public class DepokPizzaIngredientFactory implements PizzaIngredientFactory {
 
     public Dough createDough() {
-        return new ThiccCrustDough();
+        return new MediumCrustDough();
     }
 
     public Sauce createSauce() {
-        return new MicinSauce();
+        return new SambaladoSauce();
     }
 
     public Cheese createCheese() {
-        return new MimiCheese();
+        return new CheddarCheese();
     }
 
     public Veggies[] createVeggies() {
         Veggies[] veggies = {new BlackOlives(), new Mushroom(), new RedPepper(), new
-                Salak()};
+                Kangkung()};
         return veggies;
     }
 
     public Clams createClam() {
-        return new SmokedClams();
+        return new SteamedClams();
     }
 }

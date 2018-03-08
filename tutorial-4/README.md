@@ -161,3 +161,14 @@ a Singleton object and describe the pros/cons of both approaches
 > Feel free to use this section to write your own notes related to your attempt
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
+
+The eager approach instantiates the Singleton fields when the Singleton class is loaded, while the lazy approach
+instantiates only when needed (ex. when get() is called).
+Eager :
+
+
+Simple, class is always ready
+More overhead
+Lazy
+Less overhead
+Complex

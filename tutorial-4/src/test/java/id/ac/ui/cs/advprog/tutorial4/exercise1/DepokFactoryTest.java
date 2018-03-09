@@ -11,7 +11,7 @@ public class DepokFactoryTest {
     public void testCanCreatePizza() {
         PizzaStore dpkStore = new DepokPizzaStore();
 
-        Pizza dpPizza = dpkStore.orderPizza("meat");
+        Pizza dpPizza = dpkStore.orderPizza("cheese");
         assertNotNull(dpPizza);
 
 

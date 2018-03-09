@@ -78,25 +78,25 @@ public class FactoryTest {
         assertEquals("Shredded Mozzarella", allCheese[0].toString());
         assertEquals("Shredded Parmesan", allCheese[1].toString());
         assertEquals("Reggiano Cheese", allCheese[2].toString());
-        assertEquals("Keju Basi", allCheese[3].toString());
+        assertEquals("Keju Cheddar", allCheese[3].toString());
 
 
         //Clam
         assertEquals("Fresh Clams from Long Island Sound", allClam[0].toString());
         assertEquals("Frozen Clams from Chesapeake Bay", allClam[1].toString());
-        assertEquals("Clam Basi", allClam[2].toString());
+        assertEquals("Steamed Clams from nowhere", allClam[2].toString());
 
 
         //Dough
         assertEquals("ThickCrust style extra thick crust dough", allDough[0].toString());
         assertEquals("Thin Crust Dough", allDough[1].toString());
-        assertEquals("Dough Basi", allDough[2].toString());
+        assertEquals("M E D dough", allDough[2].toString());
 
 
         //Sauce
         assertEquals("Tomato sauce with plum tomatoes", allSauce[0].toString());
         assertEquals("Marinara Sauce", allSauce[1].toString());
-        assertEquals("Saus Basi", allSauce[2].toString());
+        assertEquals("Sambalado sauce", allSauce[2].toString());
 
 
         //Veggies
@@ -107,7 +107,7 @@ public class FactoryTest {
         assertEquals("Onion", allVeggies[4].toString());
         assertEquals("Red Pepper", allVeggies[5].toString());
         assertEquals("Spinach", allVeggies[6].toString());
-        assertEquals("Veggies Basi", allVeggies[7].toString());
+        assertEquals("Kangkung-kangkung", allVeggies[7].toString());
 
     }
 

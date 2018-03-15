@@ -197,3 +197,5 @@ Database [Here](https://github.com/spring-guides/gs-accessing-data-mysql)
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
 
+- Model–view–controller (MVC) is an architectural pattern commonly used for developing user interfaces that divides an application into three interconnected parts.
+- Spring Boot Framework uses Model, ModelMap, and ModelAndView in the controller methods. The model holds application data, which is displayed in the view. We use the Freemaker library for the view layer.

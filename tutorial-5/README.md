@@ -181,7 +181,7 @@ for Model-View-Controller Pattern
     - Where is Model, View, and Controller in Spring Boot Framework
     - Write your answer in [My Notes](#my-notes) section in this document
 
-## More Challange
+## More Challenge
 
 This tutorial must be really simple for some people, that's why we want to challange
 those who really eager to learn. Hre's some stuff you can try:
@@ -196,3 +196,4 @@ Database [Here](https://github.com/spring-guides/gs-accessing-data-mysql)
 > Feel free to use this section to write your own notes related to your attempt
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
+

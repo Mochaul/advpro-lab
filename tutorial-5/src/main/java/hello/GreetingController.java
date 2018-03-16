@@ -18,21 +18,21 @@ public class GreetingController {
         }
 
         StringBuilder cv = new StringBuilder();
-        cv.append("Name: Ahmad Satryaji Aulia\n");
-        cv.append("Birthdate: 01/07/1998\n");
-        cv.append("Birthplace: Samarinda\n");
-        cv.append("Address: Jl. Taman Cilandak 1 No. D9\n");
+        cv.append("Name: Mochamad Aulia Akbar Praditomo\n");
+        cv.append("Birthdate: 26/03/1999\n");
+        cv.append("Birthplace: Jakarta\n");
+        cv.append("Address: Jl. Abdul Majid Raya No. 17\n");
         cv.append("Education History:\n");
-        cv.append("- SMP Al Izhar 2010-2013\n");
-        cv.append("- SMA Al Izhar 2013-2016\n");
+        cv.append("- SMP Labschool Kebayoran 2010-2013\n");
+        cv.append("- SMAN 70 Jakarta 2013-2016\n");
         cv.append("- Faculty of Computer Science 2016-Present\n");
         model.addAttribute("cv", cv.toString());
 
         StringBuilder description = new StringBuilder();
-        description.append("I am a second-year CS student at Universitas Indonesia. ");
-        description.append("Previously, I've interned at GO-JEK software engineering. ");
-        description.append("Currently, I'm teaching assistant at UI. ");
-        description.append("Interests include cryptocurrency, music and writing.");
+        description.append("I am a 4th semester Computer Science student at Universitas Indonesia. ");
+        description.append("Previously, I've been a teaching assistant at UI for Programming Foundations course. ");
+        description.append("Currently, I'm a teaching assistant at UI for Programming Foundations 2 course. ");
+        description.append("My hobby is reading books and computer games.");
         model.addAttribute("description", description.toString());
 
         return "greeting";

@@ -1,16 +1,18 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class CustomerTest {
+    Customer customer;
 
-    // TODO: Remove redundancy in setting up test fixture in each test methods
-    // Hint: Make the test fixture into an instance variable
+    @Before
+    public void setUp() {
+        this.customer = new Customer("Alice");
+    }
 
     @Test
     public void getName() {
-        Customer customer = new Customer("Alice");
-
         assertEquals("Alice", customer.getName());
     }
 
@@ -18,7 +20,6 @@ public class CustomerTest {
     public void statementWithSingleMovie() {
         Movie movie = new Movie("Who Killed Captain Alex?", Movie.REGULAR);
         Rental rent = new Rental(movie, 3);
-        Customer customer = new Customer("Alice");
         customer.addRental(rent);
 
         String result = customer.statement();
@@ -29,8 +30,9 @@ public class CustomerTest {
         assertTrue(result.contains("1 frequent renter points"));
     }
 
-    // TODO Implement me!
+    @Test
     public void statementWithMultipleMovies() {
         // TODO Implement me!
     }
+
 }

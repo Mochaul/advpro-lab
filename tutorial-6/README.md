@@ -161,3 +161,7 @@ following questions:
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
 
+- The benefits of refactoring is that you can have a more maintainable code and keep the code clean too
+- Code become unreadable and takes a lot of memory
+- Uncleand and messy
+- 

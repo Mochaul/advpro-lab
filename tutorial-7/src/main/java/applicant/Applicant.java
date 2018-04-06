@@ -45,4 +45,4 @@ public class Applicant {
 
         evaluate(applicant, crime.and(credit).and(employment));
     }
-}
+} 

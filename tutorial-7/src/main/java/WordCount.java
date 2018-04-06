@@ -24,7 +24,7 @@ public class WordCount {
             System.out.println(String.format("The word substring '%s' occurred in %d lines",
                     word, count));
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(); 
         }
     }
 }

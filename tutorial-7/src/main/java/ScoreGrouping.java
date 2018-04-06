@@ -28,3 +28,4 @@ public class ScoreGrouping {
         System.out.println(groupByScores(scores));
     }
 }
+ 

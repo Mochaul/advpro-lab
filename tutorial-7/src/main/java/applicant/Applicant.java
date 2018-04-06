@@ -1,5 +1,7 @@
 package applicant;
 
+import java.util.function.Predicate;
+
 /**
  * 4th exercise.
  */
@@ -21,28 +23,26 @@ public class Applicant {
         return true;
     }
 
-    public static boolean evaluate(Applicant applicant, Evaluator evaluator) {
-        return evaluator.evaluate(applicant);
-    }
-
-    private static void printEvaluation(boolean result) {
+    public static void evaluate(Applicant applicant, Predicate<Applicant> evaluator) {
         String msg = "Result of evaluating applicant: %s";
-        msg = result ? String.format(msg, "accepted") : String.format(msg, "rejected");
+        msg = evaluator.test(applicant) ? String.format(msg, "accepted")
+                : String.format(msg, "rejected");
 
         System.out.println(msg);
     }
 
     public static void main(String[] args) {
         Applicant applicant = new Applicant();
-        printEvaluation(evaluate(applicant, new CreditEvaluator(new QualifiedEvaluator())));
-        printEvaluation(evaluate(applicant,
-                new CreditEvaluator(new EmploymentEvaluator(new QualifiedEvaluator()))));
-        printEvaluation(evaluate(applicant,
-                new CriminalRecordsEvaluator(
-                        new EmploymentEvaluator(new QualifiedEvaluator()))));
-        printEvaluation(evaluate(applicant,
-                new CriminalRecordsEvaluator(
-                        new CreditEvaluator(
-                                new EmploymentEvaluator(new QualifiedEvaluator())))));
+
+        Predicate<Applicant> credit = theAplicant -> theAplicant.getCreditScore() > 600;
+        Predicate<Applicant> employment = theApplicant -> theApplicant.getEmploymentYears() > 0;
+        Predicate<Applicant> crime = theApplicant -> !theApplicant.hasCriminalRecord();
+        evaluate(applicant, credit);
+
+        evaluate(applicant, credit.and(employment));
+
+        evaluate(applicant, crime.and(employment));
+
+        evaluate(applicant, crime.and(credit).and(employment));
     }
 }

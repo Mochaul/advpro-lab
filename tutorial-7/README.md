@@ -168,3 +168,5 @@ into functional style
 > Feel free to use this section to write your own notes related to your attempt
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
+
+The biggest benefit of Functional programming is brevity, because code can be more concise. A functional program doesn't create an iterator variable to be the center of a loop, so this and other kinds of overhead are eliminated from your code.

@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class PrimeCheckerTest {
 
-    private static final List<Integer> PRIME_NUMBERS = Arrays.asList(2, 3, 5, 7);
+    private static final List<Integer> PRIME_NUMBERS = Arrays.asList(2, 3, 5, 11);
     private static final List<Integer> NON_PRIME = Arrays.asList(4,6,8,10);
 
     @Test

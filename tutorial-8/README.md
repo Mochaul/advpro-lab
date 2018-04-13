@@ -179,3 +179,16 @@ for the template code that he created in `Fraction` and `Main` class in Package 
 > Feel free to use this section to write your own notes related to your attempt
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
+
+-Inconsistency di initial TallyCounter: Terjadi masalah pada thread-nya saat kita incerement serta 
+ decrement counternya. Hal ini dikarenakan "race condition", karena kita tidak mengimplementasikan lock.
+ Hal ini dapat dihindari dengan penggunaan AtomicInteger, karena kalau atomic itu uniteruptible atau tidak
+ dapat terjadi decoupled. Atau jika kita menggunakan synchronized kita dapat menjaga konsistensinya.
+
+-Quiz rule tanpa consistensy: Sebenarnya bisa kita lakukan. Tapi kita tidak bisa mengoptimasikan program kita.
+ Karena kita tidak dapat mensupport multithreading di code yang sudah di inisiasi. Kita dapat memanfaatkan, currentTimeMillis()
+ dan menghitung delta untuk mendapatkan waktu yang telah berlalu per pertanyaan. Serta menghitung score yang kita dapat. Tetapi
+ hal ini juga menuju kepada inconsistency juga.
+
+-Hanya menggunakan 1 thread: Bisa juga, tetapi sama seperti penjelasan diatas. Tetapi kita hanya bisa mendecouple codenya hanya dalam
+ 1 thread.

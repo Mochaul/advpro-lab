@@ -159,3 +159,9 @@ a JSON object while the actual data was taken from a Java object, e.g.
 > Feel free to use this section to write your own notes related to your attempt
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
+
+As you are using spring boot web, jackson dependency is implicit and we do not have to define explicitly. You can check for jackson dependency in your pom.xml in the dependency hierarchy tab if using eclipse.
+
+And as you have annotated with @RestController there is no need to do explicit json conversion. Just return a POJO and jackson serializer will take care of converting to json. It is equivalent to using  @ResponseBody when used with @Controller. Rather than placing @ResponseBody on every controller method we place @RestController instead of vanilla @Controller and @ResponseBody by default is applied on all resources in that controller. 
+
+source : https://stackoverflow.com/questions/44839753/returning-json-object-as-response-in-spring-boot

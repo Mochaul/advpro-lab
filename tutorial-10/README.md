@@ -150,4 +150,4 @@ elapsed time.
 > in doing the tutorial. You can also use this section to write text for
 > answering question(s) mentioned in the task checklists.
 
-We must know how the thread works in order to find the best way to use multithreading and optimizing the algorithm.
+We must know how the thread works in order to find the best way to use multithreading and optimizing the algorithm. 

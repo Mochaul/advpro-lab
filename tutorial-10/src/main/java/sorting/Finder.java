@@ -1,5 +1,7 @@
 package sorting;
 
+import java.util.Arrays;
+
 public class Finder {
 
 
@@ -20,5 +22,9 @@ public class Finder {
         }
 
         return returnValue;
+    }
+
+    public static int binarySearch(int[] arr, int searchValue) {
+        return Arrays.binarySearch(arr, searchValue);
     }
 }

@@ -1,5 +1,6 @@
 package sorting;
 
+import java.util.Arrays;
 
 public class Sorter {
 
@@ -23,5 +24,10 @@ public class Sorter {
         }
         return inputArr;
     }
+
+    public static void fastSort(int[] arr) {
+        Arrays.sort(arr);
+    }
+
 
 }

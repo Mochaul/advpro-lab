@@ -16,29 +16,34 @@ public class Main {
 
         //Searching Input Before Sorting
         long totalMilisSearchBeforeSort = System.currentTimeMillis();
-        int searchingResultBeforeSort = Finder.slowSearch(sequenceInput, 40738);
+        int searchBeforeSort = Finder.binarySearch(sequenceInput, 40738);
+        //int searchingResultBeforeSort = Finder.slowSearch(sequenceInput, 40738);
         totalMilisSearchBeforeSort = System.currentTimeMillis() - totalMilisSearchBeforeSort;
         System.out.println("Searching Complete in " + totalMilisSearchBeforeSort + " milisecond");
 
         //Sorting Input
         long totalMilisSorting = System.currentTimeMillis();
-        int[] sortedInput = Sorter.slowSort(sequenceInput);
+        int[] fastSorted = convertInputFileToArray();
+        Sorter.fastSort(fastSorted);
+        //int[] slowSorted = Sorter.slowSort(convertInputFileToArray());
         totalMilisSorting = System.currentTimeMillis() - totalMilisSorting;
         System.out.println("Sorting Complete in " + totalMilisSorting + " milisecond");
 
         //Searching Input After Sorting
         long totalMilisSearchAfterSort = System.currentTimeMillis();
-        int searchingResultAfterSort = Finder.slowSearch(sequenceInput, 40738);
+        //int searchingResultAfterSort = Finder.slowSearch(sequenceInput, 40738);
+        int searchingResultAfterSort = Finder.binarySearch(sequenceInput, 40738);
         totalMilisSearchAfterSort = System.currentTimeMillis() - totalMilisSearchAfterSort;
         System.out.println("Searching Complete in " + totalMilisSearchAfterSort + " milisecond");
     }
 
     /**
      * Converting a file input into an array of integer.
+     *
      * @return an array of integer that represent an integer sequence.
      * @throws IOException in the case of the file is not found because of the wrong path of file.
      */
-    private static int[] convertInputFileToArray() throws IOException {
+    public static int[] convertInputFileToArray() throws IOException {
         File sortingProblemFile = new File(pathFile);
         FileReader fileReader = new FileReader(sortingProblemFile);
         int[] sequenceInput = new int[numberOfItemToBeSorted];
